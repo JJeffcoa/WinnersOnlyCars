@@ -1,0 +1,102 @@
+
+.heading{
+    text-align: center;
+}
+.heading span{
+    font-weight: 500;
+    color: rgb(68, 255, 0);
+}
+.heading p{
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+main{
+    background-color: black;
+}
+.cars-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.cars-container .box{
+    flex: 1 1 17rem;
+    position: relative;
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.cars-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.cars-container .box img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.cars-container .box a{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    background: var(black);
+    padding: 8px;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+.cars-container .box:hover a{
+    background: green;
+    color: white;
+
+}
+
+aside{
+    position: fixed;
+    right: -320px;
+    width: 320px;
+    background-color: #fff;
+    padding: 80px 30px;
+    z-index: 4;
+    height: 100vh;
+}
+
+aside.active{
+    right: 0;
+}
+
+aside a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+aside button.close{
+    font-size: 24px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.backdrop{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,.35);
+    backdrop-filter: blur(5px);
+}
+
+.backdrop.active{
+    display: block;
+}
